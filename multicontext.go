@@ -10,6 +10,7 @@ import (
 
 var _ context.Context = MultiContext{}
 
+// WithContexts creates a new context.Context from multiple child contexts.
 func WithContexts(ctxs ...context.Context) context.Context {
 	return MultiContext{Ctxs: ctxs}
 }
